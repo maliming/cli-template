@@ -19,10 +19,10 @@ namespace MyCompanyName.MyProjectName.Commands
         {
             if (commandLineArgs.Command.IsNullOrWhiteSpace())
             {
-                return typeof(HelpCommand);
+                return typeof(ChangeCommand);
             }
 
-            return Options.Commands.GetOrDefault(commandLineArgs.Command) ?? typeof(HelpCommand);
+            return Options.Commands.GetOrDefault(commandLineArgs.Command) ?? typeof(ChangeCommand);
         }
     }
 }

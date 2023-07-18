@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assistant", "src\MyCompanyName.MyProjectName\MyCompanyName.MyProjectName.csproj", "{384C907D-0F41-46E4-9FDE-A2E3BD7C2D2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCompanyName.MyProjectName", "src\MyCompanyName.MyProjectName\MyCompanyName.MyProjectName.csproj", "{384C907D-0F41-46E4-9FDE-A2E3BD7C2D2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

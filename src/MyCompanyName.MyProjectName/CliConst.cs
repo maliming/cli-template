@@ -9,6 +9,6 @@ namespace MyCompanyName.MyProjectName
 
         public static readonly string LogFileName = Path.Combine(ConfigDirectory, "logs", "logs.txt");
 
-        public static readonly string ToolCommandName = "MyProjectName";
+        public static readonly string ToolCommandName = "ccs";
     }
 }

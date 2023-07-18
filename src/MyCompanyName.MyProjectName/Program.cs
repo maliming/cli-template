@@ -25,7 +25,7 @@ namespace MyCompanyName.MyProjectName
                 .WriteTo.Console(outputTemplate: "{Message:lj}{NewLine}{Exception}")
                 .CreateLogger();
 
-            using (var application = AbpApplicationFactory.Create<MyProjectNameDomainModule>(
+            using (var application = AbpApplicationFactory.Create<AppModule>(
                 options =>
                 {
                     options.UseAutofac();

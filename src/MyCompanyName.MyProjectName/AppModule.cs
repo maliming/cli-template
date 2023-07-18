@@ -7,12 +7,13 @@ namespace MyCompanyName.MyProjectName
     [DependsOn(
         typeof(AbpAutofacModule)
     )]
-    public class MyProjectNameDomainModule : AbpModule
+    public class AppModule : AbpModule
     {
         public override void ConfigureServices(ServiceConfigurationContext context)
         {
             Configure<CliOptions>(options =>
             {
+                options.Commands[""] = typeof(ChangeCommand);
                 options.Commands["help"] = typeof(HelpCommand);
                 options.Commands["version"] = typeof(VersionCommand);
 

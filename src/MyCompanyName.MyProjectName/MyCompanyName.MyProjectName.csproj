@@ -2,10 +2,10 @@
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
-        <TargetFramework>net5.0</TargetFramework>
+        <TargetFramework>net7.0</TargetFramework>
 
         <PackAsTool>true</PackAsTool>
-        <ToolCommandName>MyProjectName</ToolCommandName>
+        <ToolCommandName>sqlsql</ToolCommandName>
         <PackageOutputPath>./bin/nupkg</PackageOutputPath>
         <IsPackable>true</IsPackable>
         <PackageId>MyCompanyName.MyProjectName</PackageId>
@@ -13,9 +13,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Volo.Abp.Autofac" Version="4.*" />
-        <PackageReference Include="Serilog.Extensions.Logging" Version="3.0.1" />
-        <PackageReference Include="Serilog.Sinks.File" Version="4.1.0" />
-        <PackageReference Include="Serilog.Sinks.Console" Version="3.1.1" />
+        <PackageReference Include="Volo.Abp.Autofac" Version="7.3.0" />
+        <PackageReference Include="Serilog.Extensions.Logging" Version="7.0.0" />
+        <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+        <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
     </ItemGroup>
 </Project>
