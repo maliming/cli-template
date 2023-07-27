@@ -1,4 +1,5 @@
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
@@ -18,7 +19,7 @@ public class ChangeCommand : ConsoleCommandBase<VersionCommand>
             return Task.CompletedTask;
         }
 
-        foreach (var appsetting in appsettings)
+        foreach (var appsetting in appsettings.Where(x => !x.Contains("bin/Debug") && !x.Contains("bin/Release")))
         {
             var content = File.ReadAllText(appsetting);
 
