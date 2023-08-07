@@ -21,7 +21,7 @@ namespace MyCompanyName.MyProjectName
 #endif
                 .MinimumLevel.Override("Volo.Abp", LogEventLevel.Warning)
                 .Enrich.FromLogContext()
-                .WriteTo.File(CliConst.LogFileName)
+                // .WriteTo.File(CliConst.LogFileName)
                 .WriteTo.Console(outputTemplate: "{Message:lj}{NewLine}{Exception}")
                 .CreateLogger();
 

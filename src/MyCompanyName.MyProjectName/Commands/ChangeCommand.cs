@@ -23,20 +23,26 @@ public class ChangeCommand : ConsoleCommandBase<VersionCommand>
         {
             var content = File.ReadAllText(appsetting);
 
+            var changed = false;
             if (content.Contains("Trusted_Connection=True"))
             {
                 content = content.Replace("Trusted_Connection=True", "User Id=sa;Password=1q2w3E***");
-                Logger.LogInformation($"Change connection string in {appsetting}");
+                changed = true;
             }
             else if (content.Contains("User Id=sa;Password=1q2w3E***"))
             {
                 content = content.Replace("User Id=sa;Password=1q2w3E***", "Trusted_Connection=True");
-                Logger.LogInformation($"Change connection string in {appsetting}");
+                changed = true;
             }
 
             if (content.Contains(@"(LocalDb)\\MSSQLLocalDB"))
             {
                 content = content.Replace(@"(LocalDb)\\MSSQLLocalDB", "localhost");
+                changed = true;
+            }
+
+            if (changed)
+            {
                 Logger.LogInformation($"Change connection string in {appsetting}");
             }
 
